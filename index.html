@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Panadería La Noble Igualdad.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-title">
+            <h1>La Noble Igualdad</h1>
+            <img src="img/logo-lanoble.png">
+        </div>
+        <nav class="header-nav">
+            <ul class="header-nav__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="locales.html">Locales</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li class="header-nav-mobile"><i class="fas fa-bars"></i></i>
+                    <ul class="header-nav-mobile__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="locales.html">Locales</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-login">
+            <ul class="header-login__list">
+                <li><a href="login.php"><i class="fas fa-user"></i>Iniciar Sesión</a></li>
+                <li><a href="registro.php">Registrarme</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="grid-conteiner">
+        <main class="main">
+            <div class="main-redes">
+                <i class="fab fa-facebook-square "></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-twitter-square "></i>
+                <i class="fab fa-youtube-square "></i>
+            </div>
+            <div class="main-imagen ">
+
+                <img id="img" src="img/main/bread.svg ">
+                <h2 id="img-txt">calidad y confianza</h2>
+
+
+            </div>
+        </main>
+
+        <section class="section-info ">
+            <h2 class="section-info__title "><i class="fas fa-star"></i>Nuestra Comida<i class="fas fa-star"></i></h2>
+            <p class="section-info__text">En <span>La Noble Igualdad</span> esforzamos a diario para que a tu mesa lleguen los productos más ricos y saludables, elaborados con la mejor materia prima del mercado.</p>
+            <div class="section-info__food ">
+                <ul>
+                    <li><span>Pan francés</span></li>
+                    <li><span>Pan de campo</span></li>
+                    <li><span>Cremonas</span></li>
+                    <li><span>Panes artesanales</span></li>
+                </ul>
+                <ul>
+                    <li><span>Facturas de manteca</span></li>
+                    <li><span>Facturas de grasa</span></li>
+                    <li><span>Churros</span></li>
+                    <li><span>Donuts</span></li>
+                </ul>
+                <ul>
+                    <li><span>Budines y Muffins</span></li>
+                    <li><span>Masas secas</span></li>
+                    <li><span>Tortas</span></li>
+                    <li><span>Cookies</span></li>
+                </ul>
+            </div>
+        </section>
+        <section class="section-video">
+            <div class="section-video__video">
+                <video autoplay preload loop muted poster="">
+                <source src="./video/video.mp4" type="video/mp4">
+                <source src="./video/video.webm" type="video/webm">
+                <source src="./video/video.ogg" type="video/ogg">
+                </video>
+            </div>
+            <div class="contenedor-video__text">
+                <h3><span class="uno">La Noble</span><span class="dos">Igualdad</span>, en tu casa o donde tu quieras</h3>
+                <p>Contáctanos por whatsapp y realizá tu pedido.Recuerda registrarte y suma puntos para obtener grandes descuestos.</p>
+            </div>
+        </section>
+        <section class="section-avisos">
+            <div class="section-avisos__img1">
+                <img src="img/banners/otro aviso.jpg">
+            </div>
+            <div class="section-avisos__img2">
+                <img src="img/banners/Registrate! suma puntos y obtené descuentos!.gif">
+            </div>
+        </section>
+        <footer class="footer">
+            <div class="footer-logo">
+                <img src="img/logo-lanoble.png">
+            </div>
+            <div>
+                <ul class="footer-secciones">
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Locales</a></li>
+                    <li><a href="#">Contacto</a></li>
+
+
+                </ul>
+                <p class="footer-seccion-cpr" style="color: wheat;">Copyright 2020 La Noble Igualdad. Todos los derechos reservados. Diseño Daniel Agüero</p>
+            </div>
+        </footer>
+        <a class="boton-whatsapp" href="https://api.whatsapp.com/send?phone=541123887628" target="_blank"><i class="fab fa-whatsapp icono-wt"></i></a>
+    </div>
+
+    <script>
+        document.addEventListener('load', transicion());
+        var i = 0;
+
+        function transicion() {
+            const imagenes = ["img/main/bread2.svg ", "img/main/bread.svg ", "img/main/bread3.svg "];
+            const txt = ['calidad y confianza', 'excelente atención', 'variedad e innovación'];
+            setInterval(() => {
+
+                document.getElementById("img").setAttribute("src", imagenes[i]);
+                document.getElementById('img-txt').innerHTML = txt[i];
+                if (i == imagenes.length - 1) {
+                    i = 0;
+                } else {
+                    i = i + 1;
+                }
+
+
+
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>

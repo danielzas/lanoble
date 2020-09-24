@@ -1,0 +1,110 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Panadería La Noble Igualdad.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="icon.png">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="header-title">
+            <h1>La Noble Igualdad</h1>
+            <img src="img/logo-lanoble.png">
+        </div>
+        <nav class="header-nav">
+            <ul class="header-nav__list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="locales.html">Locales</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li class="header-nav-mobile"><i class="fas fa-bars"></i></i>
+                    <ul class="header-nav-mobile__list">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="locales.html">Locales</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div class="header-login">
+            <ul class="header-login__list">
+                <li><a href="login.php"><i class="fas fa-user"></i>Iniciar Sesión</a></li>
+                <li><a href="registro.php">Registrarme</a></li>
+            </ul>
+        </div>
+    </header>
+    <div class="grid-conteiner">
+        <main class="main">
+            <div class="main-redes">
+                <i class="fab fa-facebook-square "></i>
+                <i class="fab fa-instagram-square "></i>
+                <i class="fab fa-twitter-square "></i>
+                <i class="fab fa-youtube-square "></i>
+            </div>
+            <form class="main__contacto" id="form-contacto" action="mail.php" method="POST">
+                <div class="main__contacto-input" id="contacto_input-nombre">
+                    <label for="nombre">Nombre y Apellido</label>
+                    <input id="nombre" type="text" name="nombre" placeholder="Ernesto Zapata">
+                    <p>Ingrese un nombre válido.</p>
+                </div>
+                <div class="main__contacto-input" id="contacto_input-telefono">
+                    <label for="telefono">Telefono</label>
+                    <input id="telefono" type="text" name="telefono" placeholder="1122334455">
+                    <p>Ingrese un númeor válido, sin 0 y sin 15.</p>
+                </div>
+                <div class="main__contacto-input " id="contacto_input-asunto">
+                    <label for="asunto">Asunto</label>
+                    <input id="asunto" type="text" name="asunto" placeholder="consulta">
+                    <p>Ingrese caracteres</p>
+                </div>
+                <div class="main__contacto-input " id="contacto_input-mail">
+                    <label for="mail">Mail</label>
+                    <input id="mail" type="email" name="mail" placeholder="ernesto.zapata@gmail.com">
+                    <p>Ingrese un mail válido.</p>
+                </div>
+                <div class="main__contacto-input mensaje" id="contacto_input-mensaje">
+                    <label for="mensaje">Su mensaje</label>
+                    <textarea id="mensaje" maxlength="230" name="mensaje" cols="35" rows="6"></textarea>
+                    <p>Escriba su mensaje.</p>
+                </div>
+                <p id="main__contacto-mensaje-error" class="main__contacto-mensaje-error">Error<i class="fas fa-exclamation"></i>Complete correctamente el formulario.</p>
+                <div class="main__contacto-btn" id="contacto_input-telefono">
+                    <button id="submit" name="submit" type="submit">Enviar</button>
+                </div>
+                <p id="main__contacto-mensaje-ok" class="main__contacto-mensaje-ok">Gracias por contactarnos.</p>
+            </form>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-logo">
+                <img src="img/logo-lanoble.png">
+            </div>
+            <div>
+                <ul class="footer-secciones">
+
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Nosotros</a></li>
+                    <li><a href="#">Locales</a></li>
+                    <li><a href="#">Contacto</a></li>
+
+
+                </ul>
+                <p class="footer-seccion-cpr" style="color: wheat;">Copyright 2020 La Noble Igualdad. Todos los derechos reservados. Diseño Daniel Agüero</p>
+            </div>
+        </footer>
+        <a class="boton-whatsapp" href="https://api.whatsapp.com/send?phone=541123887628" target="_blank"><i class="fab fa-whatsapp icono-wt"></i></a>
+    </div>
+    <script src="./js/functions-contact.js"></script>
+</body>
+
+</html>

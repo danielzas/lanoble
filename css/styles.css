@@ -1,0 +1,1230 @@
+    .body {
+        font-family: 'EB Garamond', serif;
+    }
+    
+     :root {
+        --celeste: #75aadb;
+        /*RGB: (117, 170, 219)*/
+        --dorado: #fcbf49;
+        /*RGB: (252, 191, 73)*/
+        --castanio: #843511;
+        /*RGB: (132, 53, 17)*/
+        --sombra: 2px 3px 3px #000000;
+    }
+    
+    .grid-conteiner {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "main main main" "info info info" "video video video" "aviso aviso aviso" "footer footer footer";
+    }
+    /********************HEADER**************/
+    
+    .header {
+        background-color: rgba(117, 170, 219, 0.3);
+        min-height: 70px;
+        height: 15vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 1;
+    }
+    
+    .header-title {
+        /* display: flex;
+    flex: column; */
+        color: rgba(255, 255, 255, 0);
+        font-size: 0.6rem;
+        height: inherit;
+        min-height: 80px;
+        min-width: 140px;
+        /*   background-image: url(../img/logo-lanoble.png);
+        background-size: 150px;
+        background-origin: border-box;
+        background-repeat: no-repeat; */
+    }
+    
+    .header-title img {
+        position: absolute;
+        width: 150px;
+        z-index: 0;
+        top: 0;
+    }
+    
+    .header-nav__list {
+        list-style-type: none;
+        display: flex;
+        /* visibility: hidden; */
+    }
+    
+    .header-nav__list a {
+        color: white;
+        font-size: 2.34vw;
+        /* 2em; */
+        text-shadow: var(--sombra);
+        text-decoration: none;
+        margin: 1.46vw;
+        /* 20px; */
+    }
+    
+    .header-nav__list a:hover {
+        color: var(--dorado);
+        text-shadow: 0.1px 0.1px 0.1px black;
+        font-size: 2.37vw;
+    }
+    
+    .header-login__list {
+        list-style-type: none;
+        margin-right: 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .header-login__list a {
+        color: white;
+        text-shadow: 1px 1px 2px #000000;
+        text-decoration: none;
+    }
+    
+    .header-login__list li:first-child a {
+        color: white;
+        font-size: 3.5vh;
+        display: block;
+        text-align: center;
+        /* 1.3em; */
+    }
+    
+    .header-login__list li:first-child a:hover {
+        text-shadow: 0.5px 0.5px 1px var(--celeste);
+    }
+    
+    .header-login__list li:last-child a {
+        border: 1px solid var(--dorado);
+        padding: 2px;
+        border-radius: 5px;
+        font-size: 1.2em;
+    }
+    
+    .header-login__list li:last-child a:hover {
+        text-shadow: 0.5px 0.5px 1px var(--celeste);
+        border: 1px solid var(--celeste);
+    }
+    
+    .header-login__list li:last-child {
+        margin-top: 5px;
+    }
+    /*************************************/
+    
+    .header-nav-mobile {
+        margin: auto;
+        display: none;
+    }
+    
+    .header-nav-mobile:hover {
+        color: white;
+    }
+    
+    .header-nav-mobile__list {
+        position: absolute;
+        visibility: hidden;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .header-nav-mobile__list a {
+        font-size: 30px;
+    }
+    
+    .header-nav-mobile:hover .header-nav-mobile__list {
+        visibility: visible;
+    }
+    /**********************************/
+    /********************FIN HEADER**************/
+    /*******************MAIN*******************/
+    
+    .main {
+        grid-area: main;
+        background-image: url(../img/main.jpg);
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .main-redes {
+        color: white;
+        font-size: 2.5rem;
+        text-shadow: var(--sombra);
+        position: fixed;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .main-redes i:hover {
+        font-size: 2.7rem;
+        color: var(--dorado);
+    }
+    
+    .main-imagen img {
+        width: 40%;
+        display: block;
+        margin: auto;
+        filter: invert(100%) sepia(97%) saturate(392%) hue-rotate(276deg) brightness(112%) contrast(101%);
+        /*necesita webkit?*/
+    }
+    
+    .main-imagen h2 {
+        text-align: center;
+        color: white;
+    }
+    /*********FIN MAIN********************/
+    /****************section-info...nuestra comida**********/
+    
+    .section-info {
+        grid-area: info;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-top: 5px solid var(--celeste);
+        border-bottom: 5px solid var(--celeste);
+    }
+    
+    .section-info__title {
+        margin: 0;
+        color: var(--celeste);
+        font-size: 3vw;
+        text-shadow: 1px 1px 1px black;
+        font-style: italic;
+    }
+    
+    .section-info__title i {
+        color: var(--dorado);
+        font-size: 2.5vw;
+    }
+    
+    .section-info__text {
+        font-size: 2vw;
+        text-shadow: 0.3px 0.3px 0.3px var(--celeste);
+        margin: auto 1.46vw auto 1.46vw;
+        text-align: center;
+    }
+    
+    .section-info__text span {
+        font-style: italic;
+    }
+    
+    .section-info__food {
+        width: 90vw;
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .section-info__food ul li {
+        color: var(--dorado);
+    }
+    
+    .section-info__food ul li span {
+        color: black;
+        font-size: 2vw;
+        text-shadow: 0.3px 0.3px 0.3px var(--celeste);
+    }
+    /**************fin section-info************/
+    /*******************section video***************************/
+    
+    .section-video {
+        grid-area: video;
+        height: 40vh;
+        overflow: hidden;
+        background-color: seagreen;
+        position: relative;
+        z-index: -1;
+        border-bottom: 4px solid var(--celeste);
+    }
+    
+    .section-video__video video {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+    .contenedor-video__text {
+        text-shadow: 0.5px 0.5px 0.5px black;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    
+    .contenedor-video__text h3 {
+        font-size: 6vh;
+        text-align: center;
+        color: var(--dorado);
+    }
+    
+    .contenedor-video__text p {
+        font-size: 3.5vh;
+        text-shadow: 0.5px 0.5px 0.5px black;
+        margin: auto 1vw auto 1vw;
+        text-align: center;
+        color: var(--celeste);
+        font-weight: bold;
+    }
+    /********************fin section video*******************/
+    /********************section avisos*********************/
+    
+    .section-avisos {
+        grid-area: aviso;
+        display: flex;
+        border-bottom: 4px solid var(--celeste);
+        /*  height: 60vh; */
+    }
+    
+    .section-avisos__img1 img {
+        width: 49.2vw;
+        border-right: 2px solid var(--celeste);
+    }
+    
+    .section-avisos__img2 img {
+        width: 49.2vw;
+    }
+    /*******************fin section avisos*****************/
+    
+    .footer {
+        grid-area: footer;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--celeste);
+    }
+    
+    .footer-logo img {
+        position: relative;
+        width: 150px;
+        z-index: 1;
+        filter: opacity(60%) grayscale(100%);
+    }
+    
+    .footer-secciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    .footer-secciones a {
+        text-shadow: var(--sombra);
+        color: white;
+        text-decoration: none;
+        margin: 2vw;
+        font-size: 2vh;
+    }
+    
+    .footer-seccion-cpr {
+        font-size: 80%;
+        text-shadow: var(--sombra);
+    }
+    /***********fin footer*************/
+    /************boton whatsapp**********/
+    
+    .boton-whatsapp {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        margin: 0 1vw 1vw 0;
+    }
+    
+    .boton-whatsapp i {
+        font-size: 5vw;
+        color: #25d366;
+        text-shadow: 5px 5px 5px #000000;
+    }
+    /************fin boton whatsapp******/
+    /**********responsive***********/
+    
+    @media (max-width: 560px) {
+        /*****header****/
+        .header-nav__list {
+            /*ocultar nav principal*/
+            visibility: hidden;
+            padding: 0;
+            margin-left: 2rem;
+        }
+        .header .header-nav-mobile {
+            /*mostrar nav para mobil*/
+            padding: 0;
+            margin: auto;
+            display: block;
+            visibility: visible;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 3;
+        }
+        .header-nav-mobile i {
+            color: white;
+            font-size: 1.8rem;
+        }
+        .header-nav-mobile i:hover,
+        {
+            color: var(--dorado);
+        }
+        .header-nav-mobile__list a:hover {
+            font-size: 2rem;
+        }
+        .header-title {
+            min-width: 100px;
+            margin-left: 2px;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+        .header-login__list {
+            position: absolute;
+            right: 0;
+            top: 15px;
+        }
+        .header-login__list li:first-child a {
+            font-size: 1em;
+        }
+        .header-login__list li:last-child a {
+            font-size: 0.7em;
+        }
+        /*****fin header*****/
+        /********section video***************/
+        .contenedor-video__text {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .contenedor-video__text h3 {
+            font-size: 3vh;
+        }
+        .contenedor-video__text p {
+            font-size: 2.5vh;
+        }
+        .section-info__title {
+            font-size: 3vh;
+        }
+        .section-info__text {
+            font-size: 2vh;
+        }
+        .section-info__food ul li span {
+            font-size: 2vh;
+        }
+    }
+    /*************************************PAGE LOGIN***********************************/
+    /**********************form login******************/
+    
+    .main-form {
+        background-color: var(--celeste);
+        width: 20%;
+        min-width: 200px;
+        height: 200px;
+        border-radius: 5px;
+        border: 1px solid white;
+        box-shadow: 3px 3px 5px black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .main-form-msj {
+        margin: 0;
+        color: #119200;
+        display: inline;
+        font-size: 0.8em;
+    }
+    
+    .main-form-input {
+        position: relative;
+    }
+    
+    .main-form-input input {
+        width: 16vw;
+        min-width: 150px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 5px;
+        outline: none;
+        border: 3px solid transparent;
+        margin-left: 20px;
+        text-align: center;
+    }
+    
+    .main-form-input input:focus,
+    .main-form-input input:hover {
+        border: 3px solid var(--dorado);
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    }
+    
+    .main-form-input input::placeholder {
+        text-align: center;
+    }
+    
+    .main-form-input i {
+        position: absolute;
+        text-shadow: 0.3px 0.3px 0.3px black;
+        left: 3px;
+        top: 4px;
+    }
+    
+    .submit-login {
+        color: white;
+        font-size: 15px;
+        width: 35%;
+        min-width: 100px;
+        height: 30px;
+        font-weight: bold;
+        background-color: black;
+        border: none;
+        border-radius: 3px;
+    }
+    
+    .main-form-input-error {
+        margin: 0;
+        font-size: 2vh;
+        text-align: center;
+        background-color: #f66060;
+        display: none;
+    }
+    
+    .main-form-input-error-activo {
+        display: block;
+        width: 100%;
+    }
+    /***********fin form login**************/
+    /****************************************form registro***************************************/
+    
+    .formulario {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        width: 90%;
+        padding: 20px;
+        margin: 20vh auto auto auto;
+        background: var(--celeste);
+        border-radius: 15px;
+        box-shadow: 3px 3px 15px black;
+        margin-bottom: 150px;
+    }
+    
+    .formulario__label {
+        display: block;
+        font-weight: 700;
+        padding: 10px;
+        cursor: pointer;
+    }
+    
+    .formulario__grupo-input {
+        position: relative;
+    }
+    
+    .formulario__validacion-estado {
+        /*icono*/
+        position: absolute;
+        right: 0;
+        top: 4px;
+    }
+    
+    .formulario__input {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 5px;
+        outline: none;
+        border: 3px solid transparent;
+    }
+    
+    .formulario__input:focus {
+        border: 3px solid var(--dorado);
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    }
+    
+    .formulario__grupo-input-sexo {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    .formulario__validacion-estado-sexo {
+        /*icono*/
+        font-size: 25px;
+    }
+    
+    .formulario__error {
+        /*mensaje error input*/
+        font-size: 14px;
+        margin: 0;
+        visibility: hidden;
+    }
+    
+    .formulario__error-activo {
+        /*mensaje error input mostrado*/
+        visibility: visible;
+    }
+    
+    .formulario__grupo-btn-enviar,
+    .formulario__mensaje {
+        grid-column: span 5;
+    }
+    
+    .formulario__mensaje {
+        /*mensaje error formulario*/
+        grid-column: span 5;
+        display: block;
+        text-align: center;
+        background-color: #f66060;
+        display: none;
+    }
+    
+    .formulario__mensaje-activo {
+        display: block;
+    }
+    
+    .formulario__grupo-btn-enviar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .formulario__btn {
+        color: white;
+        font-size: 20px;
+        width: 30%;
+        height: 45px;
+        font-weight: bold;
+        background-color: black;
+        border: none;
+    }
+    
+    .formulario__btn:hover {
+        box-shadow: 3px 0 30px rgb(163, 163, 163);
+    }
+    
+    @media (max-width: 800px) {
+        .formulario {
+            display: flex;
+            flex-direction: column;
+            height: auto;
+        }
+    }
+    /*********estilos validaciones***********/
+    
+    .formulario__mensaje-exito {
+        /*mensaje formulario exito*/
+        color: #119200;
+        visibility: hidden;
+    }
+    
+    .formulario__mensaje-exito-activo {
+        visibility: visible;
+    }
+    
+    .formulario__grupo-error .formulario__label,
+    .formulario__grupo-error .formulario__validacion-estado {
+        color: #f66060;
+    }
+    
+    .formulario__input-error:focus {
+        border: 3px solid #f66060;
+    }
+    
+    .formulario__grupo-ok .formulario__validacion-estado {
+        color: #119200;
+    }
+    
+    .formulario__grupo-input-sexo-masculino-ok .formulario__validacion-estado,
+    .formulario__grupo-input-sexo-femenino-ok .formulario__validacion-estado {
+        color: #119200;
+    }
+    /*************fin form registro**********/
+    /************************************************NOSOTROS*************************************************************/
+    
+    .main__nosotros {
+        display: flex;
+        margin: 0 auto;
+        width: 90%;
+        height: 70vh;
+        align-items: center;
+    }
+    
+    .main__nosotros-logo {
+        width: 260px;
+        height: 220px;
+    }
+    
+    .main__nosotros-info {
+        height: inherit;
+        width: inherit;
+        min-width: 270px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        margin-left: 10vw;
+    }
+    
+    .main__nosotros-info-titulo {
+        font-size: 3rem;
+        color: white;
+        text-shadow: 2px 2px 2px #000000;
+        margin-bottom: 0;
+        margin-top: 20px;
+    }
+    
+    .main__nosotros-info-texto1 {
+        font-size: 1.3em;
+        color: white;
+        text-shadow: 2px 2px 2px #000000;
+    }
+    
+    .main__nosotros-info span {
+        display: block;
+        margin: 0;
+        height: 5px;
+        max-width: 500px;
+        min-width: 100px;
+        background-color: var(--celeste);
+    }
+    /***responsive****/
+    
+    @media (max-width: 800px) {
+        .main__nosotros-logo {
+            display: none;
+        }
+        .main__nosotros-info-texto1 {
+            font-size: 1em;
+        }
+    }
+    /***************************************************LOCALES***********************************************/
+    
+    .main__locales {
+        grid-area: main;
+        background-image: url(../img/main.jpg);
+        background-size: cover;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 20% 80%;
+    }
+    
+    .main__locales-list {
+        grid-column: 1;
+        margin-top: 15vh;
+        min-width: 50px;
+    }
+    
+    .main__locales-list ul {
+        list-style: none;
+        padding: 0;
+        margin-left: 5px;
+        margin-top: 60px;
+    }
+    
+    .main__locales-list ul li i {
+        color: #920d0d;
+        font-size: 3vh;
+        text-shadow: 1px 1px 1px #000000;
+    }
+    
+    .main__locales-list ul li a {
+        color: white;
+        font-size: 3vh;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px #000000;
+    }
+    
+    .main__locales-list ul li p {
+        color: var(--celeste);
+        font-size: 3vh;
+        text-align: center;
+        text-shadow: 1px 1px 1px #000000;
+    }
+    
+    .main__locales-map {
+        grid-column: 2;
+        margin-top: 14vh;
+        margin-left: 50px;
+    }
+    /****************************************************FIN LOCALES*********************************************/
+    /***************************************SECTION CONTACTO*************************************************************/
+    
+    .main__contacto {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        background: var(--celeste);
+        border-radius: 15px;
+        box-shadow: 3px 3px 15px black;
+        justify-items: center;
+        margin-top: 17vh;
+        padding: 0 40px 0 40px;
+        height: 70vh;
+        width: 40vw;
+        border: 1px solid white;
+    }
+    
+    .main__contacto-input label {
+        display: block;
+        margin-top: 20px;
+        text-shadow: 0.3px 0.3px 0.3px black;
+    }
+    
+    .main__contacto-input p {
+        margin: 0;
+        font-size: 13px;
+        display: none;
+        /*  padding: 5px; */
+    }
+    
+    .main__contacto-input-activo p {
+        display: block;
+    }
+    
+    .main__contacto-input input {
+        width: 100%;
+        min-width: 180px;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 5px;
+        outline: none;
+        border: 3px solid white;
+        box-shadow: 0.5px 0.5px 1.3px rgb(61, 60, 60);
+    }
+    
+    .main__contacto-input input:focus,
+    .main__contacto-input input:hover,
+    .main__contacto-input.mensaje textarea:focus,
+    .main__contacto-input.mensaje textarea:hover {
+        border: 3px solid var(--dorado);
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    }
+    
+    .formulario__input {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        border-radius: 5px;
+        outline: none;
+        border: 3px solid transparent;
+    }
+    
+    .formulario__input:focus {
+        border: 3px solid var(--dorado);
+        outline: none;
+        box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.4);
+    }
+    
+    .main__contacto-input.mensaje {
+        grid-column: span 2;
+    }
+    
+    .main__contacto-input.mensaje textarea {
+        border-radius: 5px;
+        outline: none;
+        border: 3px solid transparent;
+        box-shadow: 0.5px 0.5px 1.3px rgb(61, 60, 60);
+    }
+    
+    .main__contacto-mensaje-error {
+        grid-column: span 2;
+        background-color: #f66060;
+        margin: 0;
+        font-size: 15px;
+        display: none;
+    }
+    
+    .main__contacto-input p {
+        background-color: #f66060;
+        margin: 0;
+        font-size: 11px;
+        text-align: center;
+        margin-left: 5px;
+        padding: 0;
+    }
+    
+    .main__contacto-mensaje-error-activo {
+        display: block;
+    }
+    
+    .main__contacto-btn {
+        grid-column: span 2;
+    }
+    
+    .main__contacto-mensaje-ok {
+        grid-column: span 2;
+        color: #119200;
+        font-size: 12px;
+        margin: 0;
+        display: none;
+    }
+    
+    .main__contacto-mensaje-ok-activo {
+        display: block;
+    }
+    
+    .main__contacto-btn button {
+        color: white;
+        font-size: 20px;
+        width: 110%;
+        min-width: 50px;
+        height: 45px;
+        font-weight: bold;
+        background-color: black;
+        border: none;
+        margin-bottom: 4px;
+    }
+    
+    @media (max-width: 800px) {
+        .main__contacto-input {
+            grid-column: span 2;
+            gap: 0;
+        }
+        .main__contacto-input textarea {
+            width: 100%;
+            overflow-y: initial;
+        }
+        .main__contacto {
+            margin-top: 12vh;
+            padding-bottom: 20%;
+            overflow: hidden;
+            height: 410px;
+            padding-bottom: 100px;
+        }
+        .main__contacto-input label {
+            margin-top: 5px;
+        }
+    }
+    /*************************************************sesion*************************************************/
+    
+    .main__sesion {
+        grid-area: main;
+        background-image: url(../img/main.jpg);
+        background-size: cover;
+        height: auto;
+        padding-top: 20vh;
+        display: grid;
+        grid-template-columns: 20vw 80vw;
+        grid-template-rows: auto auto auto;
+        gap: 5px;
+    }
+    /*****sesion-puntos***********/
+    
+    .main__sesion-info {
+        grid-column: 2;
+        grid-row: 1;
+        background-color: var(--celeste);
+        border-radius: 15px;
+        box-shadow: 3px 3px 15px black;
+        margin-right: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border: 1px solid white;
+    }
+    
+    .main__sesion-info-nombre,
+    .main__sesion-info-puntos,
+    .main__sesion-info-puntos2 {
+        text-align: center;
+        margin: 0;
+        text-shadow: 0.5px 0.5px 0.5px white;
+    }
+    
+    .main__sesion-info-puntos {
+        margin-bottom: 40px;
+    }
+    
+    .main__sesion-info-puntos span {
+        color: var(--dorado);
+        font-size: 3rem;
+        text-shadow: 0.5px 0.5px 0.5px black;
+        background-color: rgba(234, 245, 255, 0.3);
+        padding-right: 8px;
+        border-radius: 5px;
+    }
+    
+    .main__sesion-info-puntos2 {
+        margin-bottom: 5px;
+    }
+    
+    .main__sesion-invitacion {
+        grid-column: 2;
+        grid-row: 2;
+        background: var(--celeste);
+        border-radius: 15px;
+        border: 1px solid white;
+        box-shadow: 3px 3px 15px black;
+        margin-right: 5vw;
+        margin-bottom: 20pxs;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    
+    .main__sesion-invitacion-titulo,
+    .main__sesion-invitacion-invitacion,
+    .main__sesion-invitacion-invitacion_num,
+    .main__sesion-invitacion-icono_whatsapp,
+    .main__sesion-invitacion-link,
+    .main__sesion-invitacion-salir {
+        text-align: center;
+        margin: 0;
+    }
+    
+    .main__sesion-invitacion-titulo {
+        font-size: 2.5em;
+        color: var(--dorado);
+        text-shadow: 0.5px 0.5px 0.5px black;
+    }
+    
+    @media (min-width:800px) {
+        .main__sesion-info-nombre,
+        .main__sesion-info-puntos,
+        .main__sesion-info-puntos2 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .main__sesion-invitacion-invitacion,
+        .main__sesion-invitacion-invitacion_num,
+        .main__sesion-invitacion-icono_whatsapp,
+        .main__sesion-invitacion-link,
+        .main__sesion-invitacion-salir {
+            font-size: 2em;
+            text-shadow: 0.5px 0.5px 0.5px white;
+        }
+    }
+    /*****invitacion*****/
+    
+    .main__sesion-invitacion-invitacion_num span {
+        color: var(--dorado);
+        font-size: 1.8rem;
+        background-color: rgba(234, 245, 255, 0.3);
+        padding-right: 8px;
+        border-radius: 5px;
+        text-shadow: 0.5px 0.5px 0.5px black;
+    }
+    
+    .main__sesion-invitacion-icono_whatsapp {
+        color: black;
+        text-decoration: none;
+    }
+    
+    .main__sesion-invitacion-icono_whatsapp i {
+        color: green;
+        text-shadow: 0.2px 0.2px 0.2px white;
+    }
+    
+    .main__sesion-invitacion-link {
+        color: green;
+        text-shadow: 0.2px 0.2px 0.2px white;
+    }
+    
+    .main__sesion-invitacion-salir {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .main__sesion-invitacion-invitacion-desactivada {
+        display: none;
+    }
+    /********panel*******/
+    
+    .main__sesion-panel {
+        grid-column: 1;
+        /* grid-row: 1; */
+    }
+    
+    .main__sesion-panel-option {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 7px;
+    }
+    
+    .main__sesion-panel-option i {
+        display: block;
+        font-size: 10vw;
+        text-align: center;
+        color: var(--dorado);
+        text-shadow: 0.4px 0.4px 0.4px black;
+    }
+    
+    .main__sesion-panel-option i:hover {
+        cursor: pointer;
+    }
+    
+    .main__sesion-panel-user {
+        display: block;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        text-shadow: 1px 1px 1px black;
+        background-color: var(--celeste);
+        border-radius: 15px;
+        box-shadow: 3px 3px 15px black;
+        padding: 0 20px;
+    }
+    
+    .main__sesion-panel-user:hover {
+        -webkit-text-stroke: 0.3px var(--dorado);
+        border: 0.1px solid white;
+    }
+    
+    @media (min-width: 800px) {
+        .main__sesion-panel-option {
+            /*  display: flex;
+        flex-direction: column;
+        margin: 7px; */
+        }
+        .main__sesion-panel-option i {
+            font-size: 6vw;
+            max-width: 200px;
+        }
+        .main__sesion-panel-user {
+            width: 200px;
+        }
+    }
+    /********************************sesion datos***************************/
+    
+    .main__sesion-info-datos {
+        grid-column-start: 2;
+        grid-column-end: 4;
+        align-self: center;
+        justify-self: center;
+        background-color: var(--celeste);
+        width: 250px;
+        border-radius: 15px;
+        box-shadow: 3px 3px 15px black;
+        overflow-x: hidden;
+        padding: 20px;
+        margin-bottom: 200px;
+    }
+    
+    .main__sesion-info-datos .formulario__grupo {
+        width: 200px;
+        margin: 0 auto;
+    }
+    
+    .main__sesion-info-datos .formulario__grupo.formulario__grupo-btn-enviar {
+        width: 300px;
+    }
+    
+    .main__sesion-info-datos .formulario__botones {
+        width: inherit;
+        margin: 0 auto;
+    }
+    
+    .main__sesion-info-datos .formulario__botones button {
+        color: white;
+        font-size: 20px;
+        width: 40%;
+        height: 45px;
+        font-weight: bold;
+        background-color: black;
+        border: none;
+        margin-top: 20px;
+        margin-left: 30px;
+    }
+    
+    @media (min-width: 800px) {
+        .main__sesion-info-datos {
+            width: 80%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
+    @media (max-width:800px) {
+        .main__sesion-info-datos .formulario__botones button {
+            width: inherit;
+            margin-left: 0;
+        }
+    }
+    /*****************section simulador******************************/
+    
+    .main__sesion-simulador {
+        grid-column: span 2/4;
+        grid-row: 1;
+        height: 55vh;
+        width: 70vw;
+        background-color: var(--celeste);
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    
+    .main__sesion-simulador .main__sesion-simulador-item {
+        margin: 10px;
+    }
+    
+    .main__sesion-simulador .main__sesion-simulador-item i {
+        color: var(--dorado);
+        -webkit-text-stroke: 0.1px white;
+        font-size: 2em;
+        text-shadow: 1px 1px 2px black;
+        width: 50px;
+    }
+    
+    .main__sesion-simulador .main__sesion-simulador-item input {
+        border-radius: 5px;
+        border: none;
+        height: 40px;
+        outline: none;
+        color: black;
+        font-size: 1.0rem;
+        font-weight: bold;
+        text-align: center;
+    }
+    
+    .main__sesion-simulador .main__sesion-simulador-item input:hover {
+        border: 2px solid var(--dorado);
+        outline: none;
+    }
+    
+    .main__sesion-simulador .main__sesion-simulador-item input::selection {
+        border: 2px solid var(--dorado);
+    }
+    
+    .main__sesion-simulador .main__sesion-simulador-item input::placeholder {
+        text-align: center;
+    }
+    
+    .main__sesion-simulador-mensajeTitulo {
+        padding: 0;
+        position: absolute;
+        top: 150px;
+        margin: 10px;
+        text-shadow: 0.2px 0.2px 0.2px black;
+        text-align: center;
+        font-size: 1em;
+    }
+    
+    .main__sesion-simulador-mensaje {
+        color: white;
+        padding: 0;
+        margin: 10px;
+        text-shadow: 1px 1px 2px black;
+        text-align: center;
+        font-size: 2vh;
+        position: absolute;
+        top: 450px;
+    }
+    
+    @media (max-width: 700px) {
+        .main__sesion-simulador {
+            flex-direction: column;
+        }
+    }
